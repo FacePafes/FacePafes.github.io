@@ -2,27 +2,306 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AdSense Example</title>
-  
-  <!-- Google AdSense Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6269391768383400"
-     crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beginner's Guide to Meditation</title>
+
+  <style>
+    /* Basic Styles */
+    :root {
+      --bg-light: #f9f9f9;
+      --primary: #00796b;
+      --accent: #4dd0e1;
+      --text-light: #222;
+      --text-dark: #eaeaea;
+      --highlight: #ffd54f;
+      --border-radius: 8px;
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    h3 {
+      margin-top: 2rem;
+      color: var(--primary);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding: 1rem 0;
+      background-color: var(--primary);
+      border-radius: 8px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 0 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--highlight);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background-color: var(--accent);
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: var(--highlight);
+      transform: scale(1.05);
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      background-color: white;
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 3rem;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .benefit img {
+      width: 50px;
+      height: 50px;
+      margin-right: 1rem;
+    }
+
+    .benefit p {
+      font-size: 1.1rem;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background-color: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 3rem;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+      margin: 1rem 0;
+      transition: color 0.3s;
+    }
+
+    .faq-question:hover {
+      color: var(--accent);
+    }
+
+    .faq-answer {
+      display: none;
+      font-size: 1rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    .faq-answer.open {
+      display: block;
+    }
+
+    /* Newsletter Signup Section */
+    .newsletter-section {
+      text-align: center;
+      padding: 3rem;
+      background-color: var(--primary);
+      color: white;
+      border-radius: var(--border-radius);
+      margin-bottom: 3rem;
+    }
+
+    .newsletter-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-section input[type="email"] {
+      padding: 0.8rem;
+      width: 60%;
+      font-size: 1rem;
+      border-radius: var(--border-radius);
+      border: 2px solid #ddd;
+      margin-right: 1rem;
+    }
+
+    .newsletter-section button {
+      background-color: var(--accent);
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+    }
+
+    .newsletter-section button:hover {
+      background-color: var(--highlight);
+    }
+
+    /* Footer */
+    footer {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .social-links a {
+      margin: 0 1rem;
+      color: var(--primary);
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: var(--highlight);
+    }
+
+  </style>
 </head>
 <body>
 
-  <h1>Welcome to My Site</h1>
-  <p>This is a test page for AdSense ads.</p>
+  <nav>
+    <a href="#">Home</a>
+    <a href="tools/timer.html">Tools</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#faq">FAQ</a>
+  </nav>
 
-  <!-- AdSense Ad Unit -->
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-6269391768383400"
-       data-ad-slot="1234567890"  <!-- Replace with your real ad slot ID -->
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
+  <div class="hero">
+    <h2>Start Your Meditation Journey Today</h2>
+    <p>Discover the transformative power of meditation with resources and tools designed for beginners.</p>
+    <a href="tools.html" class="cta-button">Explore Meditation Tools</a>
+  </div>
+
+  <div class="benefits-section" id="benefits">
+    <h3>Benefits of Meditation</h3>
+    <div class="benefit">
+      <img src="https://via.placeholder.com/50" alt="Benefit 1">
+      <p>Reduces stress and anxiety</p>
+    </div>
+    <div class="benefit">
+      <img src="https://via.placeholder.com/50" alt="Benefit 2">
+      <p>Improves concentration and focus</p>
+    </div>
+    <div class="benefit">
+      <img src="https://via.placeholder.com/50" alt="Benefit 3">
+      <p>Enhances emotional well-being</p>
+    </div>
+  </div>
+
+  <div class="faq-section" id="faq">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq">
+      <p class="faq-question" onclick="toggleAnswer('faq1')">How do I start meditating?</p>
+      <p class="faq-answer" id="faq1">Start with just 5-10 minutes each day. Find a quiet space, focus on your breathing, and let thoughts come and go.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-question" onclick="toggleAnswer('faq2')">What is the best time to meditate?</p>
+      <p class="faq-answer" id="faq2">The best time to meditate is when you can do so without distractions, whether in the morning or before bed.</p>
+    </div>
+  </div>
+
+  <div class="newsletter-section">
+    <h2>Stay Updated with Meditation Tips</h2>
+    <p>Subscribe to our newsletter for expert advice and resources delivered straight to your inbox.</p>
+    <form action="#">
+      <input type="email" placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <div class="ad-container">
+    <!-- AdSense Ad Unit -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6269391768383400"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <footer>
+    <p>© 2025 Beginner’s Guide to Meditation. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
   <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
+    function toggleAnswer(id) {
+      const answer = document.getElementById(id);
+      answer.classList.toggle('open');
+    }
   </script>
 
 </body>
