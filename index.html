@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<style>
+    #🖕 {
+        text-align: center;
+        font-size: 2rem;
+    }
+</style>
+<span id="🖕">🖕</span>
+<script>
+    const start = new Date("2008-01-01").getTime();
+    function updatething() { 
+        const now = new Date().getTime();
+        const dif = now - start;
+        const secpass = Math.floor(dif / 1000);
+        document.getElementById("🖕").innerText = secpass;    
+    } setInterval(updatething, 1);
+</script>
