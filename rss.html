@@ -1,11 +1,11 @@
 <body onkeydown="if(event.key=='Enter')f()">
-    <input id="u" placeholder="RSS URL" style="width:100%">
+    <input id="u" placeholder="ENTER" style="width:100%">
     <div id="o"></div>
     <script>
         const f = () => {
             const input = document.getElementById('u');
             if (!input) return;
-            o.innerHTML = '...';
+            o.innerHTML = '.';
             fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(input.value.trim())}`)
                 .then(r => r.json())
                 .then(d => {
