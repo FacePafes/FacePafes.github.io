@@ -1,0 +1,21 @@
+<body onkeydown="if(event.key=='Enter')f()">
+    <input id="u" placeholder="RSS URL" style="width:100%">
+    <div id="o"></div>
+    <script>
+        const f = () => {
+            const input = document.getElementById('u');
+            if (!input) return;
+            o.innerHTML = '...';
+            fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(input.value.trim())}`)
+                .then(r => r.json())
+                .then(d => {
+                    if (d.status === 'ok') {
+                        o.innerHTML = d.items.map(i => `<hr><a href="${i.link}">${i.title}</a><div>${i.description}</div>`).join('');
+                    } else {
+                        o.innerHTML = 'Feed not found/invalid.';
+                    }
+                })
+                .catch(() => o.innerHTML = 'Network fail!!');
+        }
+    </script>
+</body>
