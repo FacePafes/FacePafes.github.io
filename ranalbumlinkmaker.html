@@ -1,0 +1,13 @@
+<style>
+  body { display: flex; height: 100vh; margin: 0; align-items: center; justify-content: center; }
+</style>
+<button onclick="L()">Roll</button>
+<script>
+  const s = new Set();
+  function L() {
+    let id;
+    do { id = Math.floor(Math.random() * 16500000) + 1; } while (s.has(id));
+    s.add(id);
+    window.open(`https://rateyourmusic.com/search?searchterm=%5BAlbum${id}%5D&searchtype=`, '_blank');
+  }
+</script>
